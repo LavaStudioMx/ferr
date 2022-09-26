@@ -5,9 +5,9 @@
     <field name="model">res.partner</field>
     <field name="inherit_id" ref="base.view_partner_form"/>
     <field name="arch" type="xml">
-      <grouo name="sale" position="inside">
+      <group name="sale" position="inside">
         <field name="credit_limit"/>
-      </grouo>
+      </group>
     </field>
   </record>
 </odoo>
