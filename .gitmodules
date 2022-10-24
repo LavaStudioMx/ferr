@@ -1,0 +1,8 @@
+[submodule "auto_exporter"]
+	path = auto_exporter
+	url = git@github.com:humanytek-team/auto_exporter.git
+	branch = 15.0
+[submodule "ftp_save"]
+	path = ftp_save
+	url = git@github.com:humanytek-team/ftp_save.git
+	branch = 15.0
