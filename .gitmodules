@@ -6,3 +6,8 @@
 	path = ftp_save
 	url = git@github.com:humanytek-team/ftp_save.git
 	branch = 15.0
+
+[submodule "humanytek-team/onebeat_integration"]
+	path = humanytek-team/onebeat_integration
+	url = git@github.com:humanytek-team/onebeat_integration.git
+	branch = 14.0
