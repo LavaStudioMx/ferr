@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="Agente_Facturas.agente_asiento_conta_9723d9e0-39dc-460d-980f-7f1a2d17b8c1" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="Agente_Facturas.new_texto_journal_en_2891fc22-3326-411c-93f3-28234ddbf8ae"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">""</field>
+  </record>
+</odoo>

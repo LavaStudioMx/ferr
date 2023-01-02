@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="Agente_Facturas.odoo_studio_account__896204a2-8866-4305-9904-bf39e77c1d48" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//tree[1]/field[@name='name']" position="after">
+          <field name="x_studio_agente_ruta" optional="show" widget="many2many_tags" options="{&quot;color_field&quot;: &quot;color&quot;, &quot;no_create&quot;: true}" string="Ruta"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="account.view_out_invoice_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">account.move</field>
+    <field name="name">Odoo Studio: account.out.invoice.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="Agente_Facturas.odoo_studio_report_i_152d3e55-96c5-4ca2-b94e-985f2a1e1150" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="/t/t/div/p[2]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span" position="replace">
+          <span>
+            <p style="margin-bottom: 0px;">Agente</p>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]" position="after">
+          <div class="row">
+            <div class="col">
+              <span t-field="line.product_uom_category_id"/>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span" position="replace">
+          <span>
+            <p style="margin-bottom: 0px;">Agente: </p>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span/p" position="after">
+          <span t-field="line.partner_id.user_id"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span/p" position="after">
+          <span t-field="line.partner_id.user_id"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span/p" position="after">
+          <span t-field="line.quantity"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/span[1]/span[1]" position="attributes">
+          <attribute name="t-field">line.partner_id.category_id</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span/span[1]" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span/span[1]" position="attributes">
+          <attribute name="style" separator=";" add="color:#0000FF"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/span[1]/span[3]" position="replace"/>
+        <xpath expr="/t/t/div/div[3]/div/span/span[2]" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[4]/div[1]" position="replace"/>
+        <xpath expr="/t/t/div/div[3]/div/span/span[2]" position="attributes">
+          <attribute name="style" separator=";" add="margin-bottom:1px"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span/span[2]" position="attributes">
+          <attribute name="style" separator=";" add="margin-bottom:5px" remove="margin-bottom:1px"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span/span[2]" position="attributes">
+          <attribute name="style" separator=";" remove="margin-bottom:5px"/>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/p/span" position="replace">
+          <span t-esc="o._l10n_mx_edi_cfdi_amount_to_text()">
+            <p>
+              <br/>
+            </p>
+            <p placeholder="Escriba &quot;/&quot; para acceder a los comandos" class="oe-hint oe-command-temporary-hint">
+              <br/>
+            </p>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div" position="attributes">
+          <attribute name="class" separator=" " add="text-right"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div" position="attributes">
+          <attribute name="class" separator=" " add="text-left" remove="text-right"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div" position="attributes">
+          <attribute name="style" separator=";" add="margin-bottom:5px"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div" position="attributes">
+          <attribute name="style" separator=";" add="margin-bottom:10px" remove="margin-bottom:5px"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div" position="attributes">
+          <attribute name="style" separator=";" add="margin-top:50px"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div" position="attributes">
+          <attribute name="style" separator=";" add="margin-top:500px" remove="margin-top:50px"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div" position="attributes">
+          <attribute name="style" separator=";" remove="margin-top:500px"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span/span[1]" position="after">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/span[1]/span[2]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/p[1]/b[1]/span[1]" position="attributes">
+          <attribute name="t-field">o.partner_id.ref</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/p" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/div/div/span" position="replace">
+          <span>
+            <p style="margin-bottom: 0px;">Agente:</p>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/div/div/span/p" position="after">
+          <span t-field="line.partner_id"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/t[5]/div[1]/div[1]/span[1]/span[1]" position="attributes">
+          <attribute name="t-field">line.partner_id.category_id</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/div/div/span/span" position="after">
+          <span t-field="line.partner_id.user_id"/>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/div/div/span/span[2]" position="attributes">
+          <attribute name="style" separator=";" add="margin-right:40px"/>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/div/div/span/span[2]" position="attributes">
+          <attribute name="style" separator=";" remove="margin-right:40px"/>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/div/div/span/span[2]" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/div/div/span/span[2]" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/div/div/span/span[1]" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/div/div/span/span[1]" position="attributes">
+          <attribute name="style" separator=";" add="color:#0000FF"/>
+        </xpath>
+        <xpath expr="/t/t/div/t[5]/div/div" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/span[1]/p[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/span[1]/span[2]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/span[1]/span[1]" position="replace"/>
+        <xpath expr="/t/t/div/h2" position="after">
+          <div class="row">
+            <div class="col-3">
+              <span>
+                <strong>Partner:</strong>
+                <br/>
+              </span>
+              <span t-field="o.partner_id"/>
+            </div>
+            <div class="col-3"/>
+            <div class="col-3"/>
+            <div class="col-3"/>
+          </div>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[1]/div[1]/span[2]" position="attributes">
+          <attribute name="t-field">o.partner_id.category_id</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]/span[1]/strong" position="replace">
+          <strong>
+            <p style="margin-bottom: 0px;">Agente:</p>
+          </strong>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="attributes">
+          <attribute name="style" separator=";" add="margin-top:20px"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="attributes">
+          <attribute name="style" separator=";" add="margin-top:10px" remove="margin-top:20px"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]/span[1]/strong/p" position="replace">
+          <p style="margin-bottom: 0px;"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]/span[1]/strong/p" position="replace">
+          <p style="margin-bottom: 0px;">Agente:</p>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="col-1" remove="col-3"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="col-5" remove="col-1"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="col-3" remove="col-5"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[1]/div[1]/span[2]" position="attributes">
+          <attribute name="t-field">o.partner_id</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[1]/div[1]/span[2]" position="attributes">
+          <attribute name="t-field">o.partner_id.category_id</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="offset-4"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="offset-0" remove="offset-4"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="col-2" remove="col-3"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/t[5]/div[1]/div[1]/span[1]/span[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/t[5]/div[1]/div[1]/span[1]/span[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/t[5]/div[1]/div[1]" position="replace"/>
+        <xpath expr="/t[1]/t[1]/div[1]/div[1]/div[1]" position="replace"/>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="inside">
+          <span>
+            <strong>Partner:</strong>
+            <br/>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="inside">
+          <span t-field="o.partner_id"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[1]/div[1]/span[2]" position="attributes">
+          <attribute name="t-field">o.partner_id.category_id</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]/span[1]/strong" position="replace">
+          <strong>
+            <p style="margin-bottom: 0px;">Agente:</p>
+          </strong>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[1]/div[1]/span[1]/strong[1]" position="replace"/>
+        <xpath expr="/t/t/div/div[1]/div[1]/span[1]/br" position="after">
+          <span>New Text Block</span>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]/span[1]/span" position="replace">
+          <span>
+            <p style="margin-bottom: 0px;">Agente: </p>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]/span[2]" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]/span[2]" position="attributes">
+          <attribute name="class" separator=" " remove="o_bold"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[1]/div[1]" position="attributes">
+          <attribute name="class" separator=" " remove="o_bold"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[1]/div[1]" position="replace"/>
+        <xpath expr="/t/t/div/div[1]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]" position="after">
+          <div class="row">
+            <div class="col">
+              <span t-field="o.partner_id"/>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]/div/span" position="replace">
+          <span>
+            <p style="margin-bottom: 0px;">New Text Block</p>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]/div" position="attributes">
+          <attribute name="class" separator=" " add="o_bold"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]/div/span/p" position="replace">
+          <p style="margin-bottom: 0px;"/>
+        </xpath>
+        <xpath expr="/t/t/div/div[2]/div/span/p" position="replace">
+          <p style="margin-bottom: 0px;">Agente:</p>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]/div/span" position="attributes">
+          <attribute name="style" separator=";" add="color:#0000FF"/>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/span[1]" position="attributes">
+          <attribute name="t-field">o.partner_id.category_id</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[2]/div[1]/span[1]/p[1]" position="attributes">
+          <attribute name="t-if">o.journal_id != "Facturas proveedor"</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]" position="attributes">
+          <attribute name="t-if">o.journal_id != "Facturas proveedor"</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/span[1]" position="attributes">
+          <attribute name="t-if">o.journal_id != "Facturas proveedor"</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[2]/div[1]/span[1]/p[1]" position="attributes">
+          <attribute name="t-if">o.journal_id != 2</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/span[1]" position="attributes">
+          <attribute name="t-if">o.journal_id != 2</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[2]/div[1]/span[1]/p[1]" position="attributes">
+          <attribute name="t-if">o.journal_id == 1 or o.journal_id == 412</attribute>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[3]/div[1]/span[1]" position="attributes">
+          <attribute name="t-if">o.journal_id == 1 or o.journal_id == 412</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[3]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]/div/span" position="replace">
+          <span>
+            <p style="margin-bottom: 0px;">Agente:</p>
+          </span>
+        </xpath>
+        <xpath expr="/t/t/div/div[4]" position="after">
+          <div class="row">
+            <div class="col">
+              <span t-field="o.partner_id"/>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t[1]/t[1]/div[1]/div[5]/div[1]/span[1]" position="attributes">
+          <attribute name="t-field">o.partner_id.category_id</attribute>
+        </xpath>
+        <xpath expr="/t/t/div/div[6]" position="after">
+          <div class="row">
+            <div class="col">
+              <span>New Text Block</span>
+            </div>
+          </div>
+        </xpath>
+        <xpath expr="/t/t/div/div[7]/div/span" position="replace">
+          <span>
+            <p style="margin-bottom: 0px;">ETIQUETA DE PRUEBA PARA SESION</p>
+          </span>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="account.report_invoice_document"/>
+    <field name="key">gen_key.02a249</field>
+    <field name="mode">extension</field>
+    <field name="model" eval="False"/>
+    <field name="name">Odoo Studio: report_invoice_document customization</field>
+    <field name="priority">99</field>
+    <field name="type">qweb</field>
+  </record>
+  <record id="Agente_Facturas.odoo_studio_stock_va_83705cfb-249e-46dc-b8d1-f9c09d51042b" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//field[@name='create_date']" position="after">
+          <field name="categ_id" optional="show" string="Categoria de Producto"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">stock.valuation.layer</field>
+    <field name="name">Odoo Studio: stock.valuation.layer.tree customization</field>
+    <field name="priority">99</field>
+    <field name="type">tree</field>
+  </record>
+</odoo>
