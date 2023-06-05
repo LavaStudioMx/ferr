@@ -11,3 +11,6 @@
 	path = humanytek-team/onebeat_integration
 	url = git@github.com:humanytek-team/onebeat_integration.git
 	branch = 14.0
+[submodule "humanytek-team/auto_exporter"]
+	path = humanytek-team/auto_exporter
+	url = git@github.com:humanytek-team/auto_exporter.git
