@@ -4,7 +4,7 @@
     'name': 'Emipro Theme Base',
     'category': 'Base',
     'summary': 'Base module containing common libraries for all Emipro eCommerce themes.',
-    'version': '4.1.6',
+    'version': '15.4.1.6',
     'license': 'OPL-1',
     'depends': [
         'website_sale_wishlist',
