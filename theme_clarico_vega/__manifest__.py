@@ -19,7 +19,7 @@
                'Multi Tab Theme Odoo, Attractive Theme, Elegant Theme, Community Theme, '
                'Odoo Enterprise Theme, Responsive Web Client, Mobile Theme , Mobile Responsive '
                'for Odoo Community, Ecommerce theme, odoo theme , B2B theme , B2C theme',
-    'version': '4.1.8',
+    'version': '15.4.1.8',
     'license': 'OPL-1',
     'depends': [
         # 'website_theme_install',
